@@ -20,16 +20,58 @@
             font-weight: bold;
             letter-spacing: 1px;
         }
+        .main-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2em;
+        }
+        .main-text {
+            flex: 1 1 300px;
+            min-width: 220px;
+            margin-right: 2em;
+        }
+        .main-img {
+            flex: 0 1 350px;
+            max-width: 350px;
+            width: 100%;
+            text-align: right;
+        }
+        .main-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 700px) {
+            .main-flex {
+                flex-direction: column;
+                padding: 1em;
+            }
+            .main-text {
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
+            .main-img {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="banner">Alex - PT Richmond Southwest London</div>
-    <div style="padding:2em;">
-        <!-- Main content goes here -->
-        Hello. I am Alex, a Personal Trainer based in Richmond, Southwest London.<br>
-        I specialise in rehab, golf, and preparation for big events.<br>
-        My goal is to help clients achieve the best results with optimal training.<br>
-        I want you to train yourself into the best version of you.
+    <div class="main-flex">
+        <div class="main-text">
+            Hello. I am Alex, a Personal Trainer based in Richmond, Southwest London.<br>
+            I specialise in rehab, golf, and preparation for big events.<br>
+            My goal is to help clients achieve the best results with optimal training.<br>
+            I want you to train yourself into the best version of you.
+        </div>
+        <div class="main-img">
+            <img src="src/IMG_2864_usethis.jpeg" alt="Alex Personal Trainer Richmond" />
+        </div>
     </div>
 </body>
 </html>
