@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alex — Personal Trainer based in Richmond, SW London. Specialising in rehab, golf and event preparation. Book via the contact form.">
+    <meta property="og:title" content="Alex — Personal Trainer, Richmond SW London">
+    <meta property="og:description" content="Rehab, golf-specific training and event preparation. Book online.">
+    <meta property="og:image" content="https://yourdomain.com/src/IMG_2864_usethis.webp">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Alex - PT Richmond Southwest London</title>
     <style>
         body {
@@ -74,10 +80,23 @@
         .contact-section a:hover {
             text-decoration: underline;
         }
+        .cta {
+            background: #ffd100;
+            color: #000;
+            padding: .6em 1em;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: .5em;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .cta:focus { outline: 3px solid rgba(255,209,0,.4); outline-offset:3px; }
     </style>
 </head>
 <body>
-    <div class="banner">Alex - PT Richmond Southwest London</div>
+    <header class="banner" role="banner">
+  <h1>Alex — Personal Trainer, Richmond SW London</h1>
+</header>
     <div class="main-flex">
         <div class="main-text">
             Hello. I am Alex, a Personal Trainer based in Richmond, Southwest London.<br>
@@ -86,13 +105,16 @@
             I want you to train yourself into the best version of you.
         </div>
         <div class="main-img">
-            <img src="src/IMG_2864_usethis.jpeg" alt="Alex Personal Trainer Richmond" />
+            <img src="src/IMG_2864_usethis.webp"
+     alt="Alex, a personal trainer in Richmond"
+     width="1200" height="800"
+     loading="lazy" />
         </div>
     </div>
     <div class="contact-section">
         <p style="margin:0 0 .5em 0; font-size:1.05em;">Want to get in touch or book a session?</p>
         <p style="margin:0;">
-            <a href="https://forms.gle/uxuCqVuLhTqqZLPZ6" target="_blank" rel="noopener">Contact / Book via this form</a>
+            <a class="cta" href="https://forms.gle/uxuCqVuLhTqqZLPZ6" role="button" aria-label="Open booking form">Book / Contact</a>
         </p>
     </div>
 </body>
