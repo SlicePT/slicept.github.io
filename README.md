@@ -1,54 +1,60 @@
 # slicept.github.io
 
-This is the repository for the SlicePT website, which is hosted on GitHub Pages. The website is built using HTML and CSS, and it serves as a platform to showcase the PT to prospective clients.
+This repository contains the static website for SlicePT. It's a small HTML/CSS site (single `index.html` + assets in `src/`) intended to be hosted on GitHub Pages.
 
-## Running the Webpage Locally
+Summary
+- Site entry: `index.html`
+- Static assets: `src/` (images, etc.)
+- Contact / booking form: https://forms.gle/uxuCqVuLhTqqZLPZ6
 
-To view the website on your local machine:
+Quick local development
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/slicept/slicept.github.io.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd slicept.github.io
-    ```
+1. Open the project folder in your terminal or a code editor:
 
-### Option 1: Open Directly
-3. Open the `index.html` file in your web browser.
+```bash
+cd /path/to/slicept.github.io
+```
 
-No additional setup is required since the site uses only HTML and CSS.
+2. Recommended: run a simple local server (so relative paths and image loading behave like on the web):
 
-### Option 2: Run a Local Web Server (Recommended for Testing)
-If you want to test features like navigation, relative paths, or preview the site as it would appear when hosted, you can run a simple local web server:
+Using Python 3 (no extra installs):
 
-#### Using Python (if installed)
 ```bash
 python3 -m http.server 8000
+# then open http://localhost:8000 in your browser
 ```
-Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-#### Using Node.js (if installed)
-First, install http-server globally (if not already installed):
+To stop the server, press Ctrl+C in the terminal where it is running, or kill the process:
+
 ```bash
-npm install -g http-server
+# find and kill by PID (example)
+pkill -f "python3 -m http.server"
 ```
-Then run:
+
+Editing the site
+- Edit `index.html` for content changes (text, styles).
+- Replace or add images under `src/`. Keep filenames and relative paths in `index.html` in sync.
+
+Git / publishing notes
+- The site is typically published via GitHub Pages. The repository's default branch is `main` (see repository settings for which branch is used for Pages).
+- If you are working on a feature branch (for example `basicWebPage`), push your branch and open a pull request to `main`.
+
 ```bash
-http-server -p 8000
+# push current branch
+git add .
+git commit -m "Describe changes"
+git push origin $(git branch --show-current)
 ```
-Open [http://localhost:8000](http://localhost:8000) in your browser.
 
----
+Accessibility and caching
+- If you don't see updated content in your browser after edits, perform a hard reload (Cmd+Shift+R) or open the page in a private/incognito window to bypass cache.
 
-## Requirements
-- No dependencies required for basic usage.
-- For local server testing, you need either Python 3 or Node.js installed.
+Other notes
+- A `.gitignore` is included to ignore macOS artifacts such as `.DS_Store` and common editor folders.
+- Server logs (when started with `nohup`) are sometimes written to `/tmp/slicept_http.log` in local workflows — check there if you need to see request logs.
 
-## Troubleshooting
-- If you see broken links or missing images, try running a local server as described above.
-- For any issues, please open an issue in this repository.
+Contact
+- Booking/contact form: https://forms.gle/uxuCqVuLhTqqZLPZ6
 
-## License
-This project is licensed under the MIT License.
+License
+- This project is provided as-is. Add a LICENSE file to declare a formal license (e.g., MIT) if desired.
